@@ -1,13 +1,13 @@
-package Service;
+package com.example.trabalhofinal.service;
 
-import Repository.ClienteRepository;
-import Repository.ContaCorrenteRepository;
-import domain.Cliente;
+import com.example.trabalhofinal.repository.ClienteRepository;
+import com.example.trabalhofinal.repository.ContaCorrenteRepository;
+import com.example.trabalhofinal.domain.Cliente;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class Main {
+public class MainService {
 
     @Autowired
     ContaCorrenteRepository contaCorrenteRepository;
@@ -20,5 +20,9 @@ public class Main {
         clienteRepository.save(cliente);
 
         return true;
+    }
+
+    public Iterable<Cliente> findAll(){
+        return clienteRepository.findAll();
     }
 }

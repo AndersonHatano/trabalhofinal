@@ -1,6 +1,6 @@
-package Repository;
+package com.example.trabalhofinal.repository;
 
-import domain.ContaCorrente;
+import com.example.trabalhofinal.domain.ContaCorrente;
 import org.springframework.data.repository.CrudRepository;
 
 public interface ContaCorrenteRepository extends CrudRepository<ContaCorrente, Long> {
